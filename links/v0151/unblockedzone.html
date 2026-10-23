@@ -1,0 +1,37 @@
+<!-- Downloaded from unblockedzone. join discord.gg/v66D3fn4kD for 100+ links -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>unblockedzone</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body style="margin:0;background:#0b0d12;color:#fff;font-family:Arial,sans-serif;">
+<div id="wrap" style="min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;">
+  <p>fetching...</p>
+</div>
+<script>
+(function () {
+    var _mirrors = [
+"https://cdn.jsdelivr.net/gh/s0n-1m-cr1n3/sc13nc3/assets/index.html",
+      "https://gcore.jsdelivr.net/gh/s0n-1m-cr1n3/sc13nc3/assets/index.html",
+      "https://originfastly.jsdelivr.net/gh/s0n-1m-cr1n3/sc13nc3/assets/index.html",
+      "https://fastly.jsdelivr.net/gh/s0n-1m-cr1n3/sc13nc3/assets/index.html",
+      "https://testingcf.jsdelivr.net/gh/s0n-1m-cr1n3/sc13nc3/assets/index.html",
+      "https://jsdelivr.b-cdn.net/gh/s0n-1m-cr1n3/sc13nc3/assets/index.html",
+      "https://jsd.onmicrosoft.cn/gh/s0n-1m-cr1n3/sc13nc3/assets/index.html",
+      "https://cdn.jsdmirror.com/gh/s0n-1m-cr1n3/sc13nc3/assets/index.html",
+      "https://cdn.statically.io/gh/s0n-1m-cr1n3/sc13nc3@main/assets/index.html",
+      "https://cdn.staticdelivr.com/gh/s0n-1m-cr1n3/sc13nc3/main/assets/index.html"
+    ];
+    function fetchContent(i) {
+        if (i >= _mirrors.length) { document.body.innerHTML = "<p style=\"padding:40px;\">Could not load site (all mirrors failed).</p>"; return; }
+        fetch(_mirrors[i]).then(function (r) { if (!r.ok) return Promise.reject(); return r.text(); })
+            .then(function (html) { document.open(); document.write(html); document.close(); })
+            .catch(function () { fetchContent(i + 1); });
+    }
+    fetchContent(0);
+})();
+</script>
+</body>
+</html>
